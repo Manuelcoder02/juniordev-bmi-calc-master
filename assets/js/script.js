@@ -13,6 +13,7 @@ const inputHeightMetric = document.querySelector(".height-metric");
 const inputWeightMetric = document.querySelector(".weight-metric");
 
 const labelBMIScore = document.querySelector(".bmi-score");
+const labelBMIClassification = document.querySelector('.bmi-classification');
 
 // console.log(formImperial);
 // console.log(formMetric);
@@ -78,8 +79,20 @@ inputWeightMetric.addEventListener('mouseleave', function(e){
       console.log(bmi);;
   
   // 2. Update the bmi score
-  labelBMIScore.textContent = bmi.toFixed(2);
-  // 3. Display the bmi result
+  const bmiFormatted = bmi.toFixed(2)
+  labelBMIScore.textContent = bmiFormatted;
+
+  // 3. Update the bmi range and classification
+  if (bmiFormatted < 18.5) {
+    labelBMIClassification.textContent = `underweight`;
+  } else if(bmiFormatted >= 18.5 && bmiFormatted <= 24.9) {
+    labelBMIClassification.textContent = `healthy weight`;
+  } else if (bmiFormatted >= 25 && bmiFormatted <= 29.9) {
+    labelBMIClassification.textContent = `overweight`;
+  } else if (bmiFormatted >= 30) {
+    labelBMIClassification.textContent = `obese`
+  }
+  // 4. Display the bmi result
   document.querySelector('.bmi-info__welcome').classList.add('hidden')
   document.querySelector('.bmi-info__inputted').classList.remove('hidden')
 })
