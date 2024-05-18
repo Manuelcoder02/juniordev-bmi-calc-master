@@ -1,0 +1,608 @@
+/* RESET STYLING */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+}
+img {
+  max-width: 100%;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+body {
+  background: var(--Pure-White, #fff);
+}
+
+/* HEADER STYLING */
+.header {
+  border-radius: 0px 0px 35px 35px;
+  background: var(
+    --Gradient-1,
+    linear-gradient(290deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%)
+  );
+  width: 100%;
+  padding-bottom: 20em;
+  text-align: center;
+}
+.header img {
+  width: 40px;
+  /* border: 3px solid blue; */
+  padding: 1.3em 0;
+}
+.header-text {
+  color: var(--Gunmetal, #253347);
+  font-size: 2.8em;
+  font-weight: 600;
+  line-height: 110%;
+  padding-bottom: 0.5em;
+}
+.header p {
+  color: var(--Dark-Electric-Blue, #5e6e85);
+  font-weight: 400;
+  line-height: 150%;
+  padding-bottom: 1em;
+}
+/* #wrapper {
+  margin-top: -18em;
+} */
+/* USER DETAILS */
+.user-details {
+  background: var(--Pure-White, #fff);
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+  border-radius: 1em;
+  padding: 1em;
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: -18em;
+}
+.user-details .details {
+  color: var(--Gunmetal, #253347);
+  font-family: Inter;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding-bottom: 0.5em;
+}
+
+.radio-btn {
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 0.5em 0;
+  align-items: center;
+  gap: 5em;
+  width: 100%;
+
+  & .radio-one,
+  .radio-two {
+    display: flex;
+    gap: 1em;
+    color: var(--Gunmetal, #253347);
+    font-family: Inter;
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 50%;
+    align-items: center;
+  }
+}
+
+.box {
+  border: 1px solid #d8e2e7;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #345ff6;
+    transition: all 0.5s;
+  }
+}
+
+.active {
+  background: #345ff6;
+  /* opacity: 30%; */
+  position: relative;
+}
+
+.active::before {
+  content: " ";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  background: #345ff6;
+  opacity: 20%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+.box-text {
+  color: var(--Gunmetal, #253347);
+  font-size: 16px;
+  font-weight: 600;
+}
+/* .radio-one input {
+  border: 3px solid red;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #d8e2e7;
+  /* opacity: 0; */
+
+/* .active {
+  position: relative;
+
+  ::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #345ff6;
+  } */
+
+.height-box,
+.weight-box {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+  position: relative;
+
+  & label {
+    color: #5e6e85;
+    font-size: 1em;
+    padding-bottom: 0.5em;
+  }
+
+  & input {
+    padding: 1.5em 1em;
+    border-radius: 0.8em;
+    border: 1px solid #d8e2e7;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--Gunmetal, #253347);
+    font-weight: 600;
+
+    &:active {
+      border: 1px solid var(--Blue, #345ff6);
+    }
+  }
+  & .input-placeholder {
+    color: var(--Blue, #345ff6);
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: right;
+    position: absolute;
+  }
+
+  & .mobile-placeholder {
+    top: 2.5em;
+    left: 9.5em;
+  }
+  & .right-placeholder {
+    top: 2.5em;
+    left: 9.5em;
+  }
+
+  & .left-placeholder {
+    top: 2.5em;
+    left: 3.5em;
+  }
+}
+
+.form-imperial {
+  /* display: none; */
+  & .height-box,
+  .weight-box {
+    width: 100%;
+    & .row {
+      display: flex;
+      gap: 1em;
+      width: 100%;
+      & #height,
+      #inches,
+      #stone-weight,
+      #pound {
+        width: 50%;
+      }
+    }
+  }
+}
+
+/* BMI Info */
+.bmi-info {
+  background: linear-gradient(90deg, #345ff6 0%, #587dff 100%);
+  border-radius: 1em;
+  padding: 2em;
+  color: var(--Pure-White, #fff);
+
+  & .bmi-score {
+    color: var(--Pure-White, #fff);
+    font-weight: 600;
+    font-size: 3em;
+  }
+  & .col-2 {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 150%;
+
+    & .bmi-range {
+      font-weight: 600;
+    }
+  }
+}
+.bmi-info__welcome {
+  & h1 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+    margin-bottom: 1em;
+  }
+
+  & p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+/* BMI MEANING SECTION STYLING */
+.bmi-meaning {
+  /* border: 3px solid red; */
+  margin-top: 3em;
+  text-align: left;
+  padding: 2em 0;
+
+  & .row-1 {
+    /* border: 3px solid red; */
+    margin-bottom: 3em;
+
+    & .col-2 {
+      /* border: 3px solid black; */
+      margin-top: 1em;
+
+      & h3 {
+        color: var(--Gunmetal, #253347);
+        font-size: 1.9em;
+        line-height: 110%;
+        padding: 1em 0;
+        font-weight: 600;
+      }
+
+      & p {
+        color: var(--Dark-Electric-Blue, #5e6e85);
+        font-size: 1em;
+        line-height: 1.3em;
+      }
+    }
+  }
+
+  & .row-2 {
+    /* border: 3px solid red; */
+    background: var(
+      --Gradient-1,
+      linear-gradient(290deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%)
+    );
+
+    & .eating,
+    .exercise,
+    .sleep {
+      /* border: 3px solid green; */
+      padding: 1em 0;
+
+      & .col-1 {
+        padding-bottom: 1em;
+      }
+
+      & h4 {
+        color: #253347;
+        font-size: 1.3em;
+        padding-bottom: 1em;
+      }
+
+      & p {
+        color: var(--Dark-Electric-Blue, #5e6e85);
+        font-size: 1em;
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+/* LIMITATION SECTION STYLING */
+.limitations {
+  margin-top: 2em;
+
+  & h3 {
+    color: var(--Gunmetal, #253347);
+    font-size: 1.7em;
+    line-height: 1em;
+    padding: 1em 0;
+    text-align: center;
+  }
+
+  & .limit {
+    color: var(--Dark-Electric-Blue, #5e6e85);
+    font-size: 1em;
+    line-height: 150%;
+    padding-bottom: 1.3em;
+    text-align: center;
+  }
+
+  & .grid {
+    & .gender,
+    .age,
+    .muscle,
+    .pregnancy,
+    .race {
+      border-radius: 1em;
+      padding: 1em;
+      box-shadow: 5px 10px 56px 0px rgba(143, 174, 207, 0.25);
+      margin-bottom: 1.5em;
+
+      & .row-1 {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 0.8em;
+
+        & h4 {
+          font-size: 1.2em;
+          color: #253347;
+          font-weight: 600;
+        }
+      }
+
+      & p {
+        color: var(--Dark-Electric-Blue, #5e6e85);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+/* TABLET */
+@media (min-width: 768px) {
+  .form-metric {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & .height-box,
+    .weight-box {
+      width: 48%;
+    }
+  }
+  /* .radio-btn {
+    gap: 14em;
+  } */
+  .bmi-info {
+    border-radius: 100px 999px 999px 100px;
+    & .bmi-info__inputted {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    & .col-1 {
+      /* display: flex; */
+      align-self: flex-end;
+      /* flex-direction: column; */
+
+      & p {
+        padding-bottom: 1em;
+      }
+    }
+
+    & .col-2 {
+      width: 50%;
+    }
+  }
+
+  .bmi-meaning {
+    & .row-1 {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      & .col-1,
+      .col-2 {
+        width: 48%;
+      }
+    }
+
+    & .row-2 {
+      & .eating,
+      .exercise,
+      .sleep {
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 1.5em;
+    grid-template-areas:
+      " gender age"
+      " muscle pregnancy"
+      " race race";
+    place-content: center;
+
+    & .gender {
+      grid-area: gender;
+    }
+    & .age {
+      grid-area: age;
+    }
+    & .muscle {
+      grid-area: muscle;
+    }
+    & .pregnancy {
+      grid-area: pregnancy;
+    }
+    & .race {
+      grid-area: race;
+      width: 50%;
+      place-self: center;
+    }
+  }
+}
+
+/* DESKTOP VIEW */
+@media (min-width: 1024px) {
+  .header {
+    background: var(
+      --Gradient-1,
+      linear-gradient(290deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%)
+    );
+    /* background-size: 1240px 700px; */
+    /* border: 3px solid blue; */
+    /* padding: 1.5em 2em 8em 1.5em; */
+    padding-top: 1.5em;
+    padding-left: 3em;
+    padding-right: 15em;
+    padding-bottom: 0;
+    text-align: left;
+    width: 150%;
+
+    & .header-text {
+      margin-top: 1em;
+    }
+  }
+  .header-wrap {
+    /* border: 3px solid red; */
+    display: flex;
+  }
+  .user-details {
+    margin-top: 8em;
+    /* border: 3px solid green; */
+    /* margin-left: -9em; */
+    width: 800px;
+    position: relative;
+    left: -8em;
+    width: 100%;
+    box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+  }
+
+  .bmi-meaning {
+    & .row-1 {
+      padding: 1em 6em;
+      align-items: center;
+
+      & .col-2 {
+        & h3 {
+          font-size: 3em;
+        }
+        &p {
+          font-size: 1.7em;
+        }
+      }
+    }
+    & .container {
+      display: flex;
+      width: 100%;
+      padding: 1em 8em;
+      justify-content: space-between;
+
+      & .eating,
+      .exercise,
+      .sleep {
+        /* border: 3px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1em;
+        width: 30%;
+      }
+    }
+  }
+
+  .limitations {
+    & .container {
+      display: flex;
+      justify-content: space-between;
+
+      & h3,
+      .limit {
+        text-align: left;
+      }
+    }
+
+    & .grid {
+      grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+      grid-template-areas:
+        " gender gender"
+        " age muscle "
+        " pregnancy race";
+      place-content: center;
+
+      & .gender {
+        grid-area: gender;
+        width: 50%;
+        place-self: center;
+      }
+      & .age {
+        grid-area: age;
+        margin-left: -4em;
+        width: 100%;
+      }
+      & .muscle {
+        grid-area: muscle;
+        margin-left: -4em;
+        width: 100%;
+      }
+      & .pregnancy {
+        grid-area: pregnancy;
+        margin-left: -16em;
+        width: 100%;
+      }
+      & .race {
+        grid-area: race;
+        width: 100%;
+        margin-left: -30em;
+        /* place-self: center; */
+      }
+    }
+  }
+
+  & .mobile-placeholder {
+    top: 2.5em;
+    left: 7.5em !important;
+  }
+  & .right-placeholder {
+    top: 2.5em;
+    left: 14em !important;
+    text-align: right;
+  }
+
+  & .left-placeholder {
+    top: 2.5em;
+    left: 6.2em !important;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
