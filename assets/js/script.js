@@ -84,13 +84,13 @@ inputWeightMetric.addEventListener('mouseleave', function(e){
 
   // 3. Update the bmi range and classification
   if (bmiFormatted < 18.5) {
-    labelBMIClassification.textContent = `underweight`;
+    labelBMIClassification.textContent = `an underweight`;
   } else if(bmiFormatted >= 18.5 && bmiFormatted <= 24.9) {
-    labelBMIClassification.textContent = `healthy weight`;
+    labelBMIClassification.textContent = `a healthy weight`;
   } else if (bmiFormatted >= 25 && bmiFormatted <= 29.9) {
-    labelBMIClassification.textContent = `overweight`;
+    labelBMIClassification.textContent = `an overweight`;
   } else if (bmiFormatted >= 30) {
-    labelBMIClassification.textContent = `obese`
+    labelBMIClassification.textContent = `an obese`
   }
   // 4. Display the bmi result
   document.querySelector('.bmi-info__welcome').classList.add('hidden')
