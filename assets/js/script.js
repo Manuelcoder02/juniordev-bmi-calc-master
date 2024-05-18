@@ -70,6 +70,6 @@ console.log(formEL);
 // })
 inputWeightMetric.addEventListener('mouseleave', function(e){
   e.preventDefault();
-  const bmi = (weight / height) * height;
+  const bmi = Number.parseFloat((weight / height) * height);
       console.log(bmi);;
 })
