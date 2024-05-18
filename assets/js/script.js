@@ -77,7 +77,9 @@ inputWeightMetric.addEventListener('mouseleave', function(e){
   const bmi = Number.parseFloat(weight / (height * height));
       console.log(bmi);;
   
-  // 2. Display the bmi result
+  // 2. Update the bmi score
+  labelBMIScore.textContent = bmi.toFixed(2);
+  // 3. Display the bmi result
   document.querySelector('.bmi-info__welcome').classList.add('hidden')
   document.querySelector('.bmi-info__inputted').classList.remove('hidden')
 })
