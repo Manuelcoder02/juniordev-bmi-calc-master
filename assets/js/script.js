@@ -70,8 +70,14 @@ console.log(formEL);
 // })
 inputWeightMetric.addEventListener('mouseleave', function(e){
   e.preventDefault();
+
+  // 1. Calculate the bmi
   const height = Number(inputHeightMetric.value);
   const weight = Number(inputWeightMetric.value);
   const bmi = Number.parseFloat(weight / (height * height));
       console.log(bmi);;
+  
+  // 2. Display the bmi result
+  document.querySelector('.bmi-info__welcome').classList.add('hidden')
+  document.querySelector('.bmi-info__inputted').classList.remove('hidden')
 })
