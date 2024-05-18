@@ -33,12 +33,43 @@ btnImperial.addEventListener("click", () => {
   formMetric.classList.add("hidden");
 });
 
-inputWeightMetric.addEventListener("keypress", (e) => {
+console.log(inputWeightMetric);
+// inputWeightMetric.addEventListener("keydown", (e) => {
+
+//   e.preventDefault();
+//   if (e.keyCode === 13) {
+
+//     const height = Number(inputHeightMetric.value);
+//     const weight = Number(inputWeightMetric.value);
+  
+//     const bmi = (weight / height) * height;
+//     console.log(bmi);
+//   }
+
+// });
+      const height = Number(inputHeightMetric.value);
+      const weight = Number(inputWeightMetric.value);
+
+const formEL = document.querySelector('.form-metric');
+console.log(formEL);
+
+// formEL.addEventListener('mouseleave', function(e){
+//   e.preventDefault();
+
+//     if(e.target.classList.contains('weight-metric')) {
+//       // 
+//       // const bmi = (weight / height) * height;
+//       // console.log(bmi);
+//       console.log('LINK');
+
+//     }
+//   console.log(e.target);
+
+  
+
+// })
+inputWeightMetric.addEventListener('mouseleave', function(e){
   e.preventDefault();
-
-  const height = Number(inputHeightMetric.value);
-  const weight = Number(inputWeightMetric.value);
-
   const bmi = (weight / height) * height;
-  console.log(bmi);
-});
+      console.log(bmi);;
+})
