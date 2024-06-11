@@ -213,7 +213,7 @@ body {
       display: flex;
       gap: 1em;
       width: 100%;
-      & #height,
+      & #feet,
       #inches,
       #stone-weight,
       #pound {

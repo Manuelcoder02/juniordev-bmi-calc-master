@@ -15,9 +15,6 @@ const inputWeightMetric = document.querySelector(".weight-metric");
 const labelBMIScore = document.querySelector(".bmi-score");
 const labelBMIClassification = document.querySelector('.bmi-classification');
 
-// console.log(formImperial);
-// console.log(formMetric);
-
 btnMetric.addEventListener("click", () => {
   btnImperial.classList.remove("active");
   btnMetric.classList.add("active");
@@ -34,7 +31,6 @@ btnImperial.addEventListener("click", () => {
   formMetric.classList.add("hidden");
 });
 
-console.log(inputWeightMetric);
 // inputWeightMetric.addEventListener("keydown", (e) => {
 
 //   e.preventDefault();
@@ -52,7 +48,6 @@ console.log(inputWeightMetric);
       const weight = Number(inputWeightMetric.value);
 
 const formEL = document.querySelector('.form-metric');
-console.log(formEL);
 
 // formEL.addEventListener('mouseleave', function(e){
 //   e.preventDefault();
@@ -65,9 +60,7 @@ console.log(formEL);
 
 //     }
 //   console.log(e.target);
-
   
-
 // })
 inputWeightMetric.addEventListener('mouseleave', function(e){
   e.preventDefault();
@@ -96,3 +89,17 @@ inputWeightMetric.addEventListener('mouseleave', function(e){
   document.querySelector('.bmi-info__welcome').classList.add('hidden')
   document.querySelector('.bmi-info__inputted').classList.remove('hidden')
 })
+
+
+// Imperial BMI functionalities
+const feetInput = document.querySelector('#feet');
+const inchesInput = document.querySelector('#inches');
+const stoneWeightInput = document.querySelector('#stone-weight');
+const poundInput = document.querySelector('#pound');
+
+console.log(formImperial);
+
+// formImperial.addEventListener('submit', function(e){
+//   e.preventDefault();
+
+// })
