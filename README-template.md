@@ -16,7 +16,6 @@ This is a solution to the [Body Mass Index Calculator challenge on Frontend Ment
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 

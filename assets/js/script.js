@@ -65,8 +65,30 @@ inputWeightMetric.addEventListener('mouseleave', function(e){
   e.preventDefault();
 
   // 1. Calculate the bmi
- height = Number(inputHeightMetric.value);
+ const heightCM = Number(inputHeightMetric.value);
  weight = Number(inputWeightMetric.value);
+
+height = heightCM / 100;
+ bmi = Number.parseFloat(weight / (height * height));
+      // console.log(bmi);;
+  
+  // 2. Update the bmi score
+  updateBMi();
+
+  // 3. Update the bmi range and classification
+  updateBMIClassification();
+
+  // 4. Display the bmi result
+  displayBMI();
+})
+inputHeightMetric.addEventListener('mouseleave', function(e){
+  e.preventDefault();
+
+  // 1. Calculate the bmi
+ const heightCM = Number(inputHeightMetric.value);
+ weight = Number(inputWeightMetric.value);
+
+height = heightCM / 100;
  bmi = Number.parseFloat(weight / (height * height));
       // console.log(bmi);;
   
